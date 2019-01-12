@@ -1,12 +1,28 @@
 {
   "name": "clean-url",
   "version": "1.0.0",
-  "description": "",
+  "description": "This package exposes methods that let you check a specific url, if that contains pornographical content or not",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">=7.8.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "framework",
+    "node",
+    "utility",
+    "clean-url"
+  ],
+  "scripts": {
+    "test": "node tests/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulbhj/clean-url.git"
+  },
+  "author": "Vipul Bhardwaj (@vipulbhj)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipulbhj/clean-url/issues"
+  },
+  "homepage": "https://github.com/vipulbhj/clean-url#readme"
 }
