@@ -1,7 +1,7 @@
 const fs = require('fs');
 const url = require('url');
 
-let data = fs.readFileSync('./assets/all-banned-porn-sites.txt').toString();
+let data = fs.readFileSync(__dirname + '/assets/all-banned-porn-sites.txt').toString();
 if(!data.trim()) {
     return "Empty File";
 }
