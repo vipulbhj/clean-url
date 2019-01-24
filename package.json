@@ -1,6 +1,6 @@
 {
   "name": "@vipulbhj/clean-url",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "This package exposes methods that let you check a specific url, if that contains pornographical content or not",
   "main": "index.js",
   "engines": {
