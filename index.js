@@ -1,26 +1,17 @@
 const fs = require('fs');
 const url = require('url');
 
-let data = fs.readFileSync(__dirname + '/assets/all-banned-porn-sites.txt').toString();
-if(!data.trim()) {
-    return "Empty File";
-}
-
-let arrayOfStr = data.split('\n');
-arrayOfUrls = arrayOfStr.map((item) => {
-    if(item.endsWith('\t')) {
-        return item.substring(4, item.length -1);
-    }
-    return item.substring(4);
-});
-
+const data = require('./assets/sites.json');
 
 // methods to be exported
 function checkCleanUrl(urlFromReq) {
-    for(let url of arrayOfUrls) {
-        if(urlFromReq.includes(url)) {
-            return true;
-        }
+    let parsedUrl = url.parse(urlFromReq);
+    let host = parsedUrl.host || parsedUrl.pathname.trim().split("/")[0];
+    if(!host.startsWith('www.')) {
+        host = `www.${host}`;
+    }
+    if(host in data) {
+        return true;    
     }
     return false;
 }

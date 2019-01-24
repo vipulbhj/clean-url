@@ -1,13 +1,13 @@
 const checkCleanUrl = require('../index');
 
 const test = [
-    ['http://facebook.com', false],
-    ['www.google.com/?query=abc', false],
+    ['facebook.com', false],
+    ['https://www.google.com/?query=abc', false],
     ['www.twitter.com/user/home', false],
-    ['www.redtuve.com', true],
+    ['https://www.redtuve.com', true],
     ['www.les-groses.net', true],
-    ['www.nexxx.com', true],
-    ['www.freesex.com', true]
+    ['https://www.nexxx.com', true],
+    ['freesex.com', true]
 ]
 
 
